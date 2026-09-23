@@ -4,40 +4,98 @@
 <html>
 
 
-<body style="font-family: Arial, Helvetica, sans-serif;background-color: bisque;">
+
+
+<body 
+style="
+font-family: Arial, Helvetica, sans-serif;
+background-color: bisque;
+background-image: url(backrooms_wall.png);
+height:100vh
+">
 
 
 
-  <h1 style="margin-left:70px;padding:2px">
-    <strong>Welcome to something something OS!</strong>
+<div style="
+display:flex;
+justify-content:space-around;
+background-color:rgba(0,0,0,0.25);
+margin-left:18px;
+margin-right:18px;
+align-items: center;
+">
+  <p>
+    BackOS
+  </p>
+  <img src="infinity free symbol.png" style="
+  height:50px">
+  <p id="timeElement">
+    Time
+  </p>
+</div>
+
+
+<div style="
+border: solid;
+border-color:#8d662c;
+background-color:rgb(99, 116, 7) ;
+width:fit-content;
+border-radius: 10px;
+padding:10px;
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%)">
+
+
+
+  <h1 style="left:50%;">
+    <strong>Welcome to BackOS!</strong>
   </h1>
 
 
-  <p1 style="color:blue">
-    This is my first time coding so cut me some slack pls
+  <p1 style="
+  color:black;
+  font-family:'Times New Roman', Times, serif;
+  ">
+    This OS is used on the naturally generated computers in the backrooms
   </p1>
 
   <br>
 
-  <img src="cutest_ketty.jpg" style="width:300px;height:200px;border-radius:12px;margin-left:50px;padding:10px;padding-bottom:3px">
+  <img src="cutest_ketty.jpg" style="
+  width:300px;height:200px;
+  border-radius:12px;margin-left:50px;
+  padding:10px;
+  padding-bottom:3px
+  ">
   <br>  
   <caption>
       cute cat
   </caption>
-<br>
-<br>
-
-  <button style="border-radius: 3px">
-    <br>
-  <a href="https://www.instagram.com/starthackclub/">Stardance Insta</a>
-  </button>
-<br>
-<br>
+</div>
 
 
-  <button style="background-color: rgb(0, 255, 213);border-radius:3px;border-color: aqua;">
-    <s>Red Button</button></s>
-  </button>
+
+  <script>
+    setInterval(function(){
+      document.querySelector("#timeElement").innerHTML=new Date().toLocaleString();
+    },1000);
+    
+  </script>
+
+  <!--
+  Equivalent to:
+    function updatetime()
+    {
+      var TimeRN= new Date().toLocaleString();
+      var timeText= document.querySelector("#timeElement");
+      timeText.innerHTML=TimeRN
+    }
+    setInterval(updatetime,1000);
+    -->
+
+
 
 </body>
 
