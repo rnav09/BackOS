@@ -1,4 +1,2 @@
-# coolwebos1
-# A webos with a cute picture of my cat ketty.
-# Also my first coding project ever.
-# Hopefully this turns out interesting by the end??
+#BackOS
+#This OS is used on the naturally generated computers in the backrooms
