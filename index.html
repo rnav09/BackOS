@@ -7,19 +7,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css"/>
+  <meta charset="UTF-8">
+  <title>BackOS</title>
 </head>
-
 
 <body class="body">
 
 
 
 
-<div class="topBar">
+<div class="topBar" id="top">
   <p>
     BackOS
   </p>
-    <img src="infinity free symbol.png" id="welcomeopen" class="infinitySymbol">
+    <img src="infinity_free_symbol.png" id="welcomeopen" class="infinitySymbol">
   <p id="timeElement">
     Time
   </p>
@@ -54,6 +55,45 @@
     Level_XX.jpg
   </caption>
 </div>
+
+
+
+
+
+
+<div style="padding-top: 64px;padding-left:16px;">
+  <div class="notes_App";>
+      <img src="backrooms_notes_icon.jpg" class="notes_icon" id="notesIcon">
+      <p style="margin:0px;">
+       Notes.exe
+      </p>
+  </div>
+</div>
+
+
+
+<div id="notes" class="notesWindow" style="display:none" >
+
+  <div id="notesheader" class="notesTitlebar">
+      <div id="notesTabs" class="folderTabs">
+      </div>
+    <button id="notesclose" class="close-btn">X</button>
+  </div>
+
+
+
+  <div id="notesContent" class="folderPage">
+    <!--<p>Notesnotesnotesnotes</p>-->
+  </div>
+
+</div>
+
+
+
+
+
+
+
 
 <script src="script.js"></script>
 </body>

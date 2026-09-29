@@ -25,7 +25,7 @@
   border: solid 2px;
   border-color: #b8a13a;
   background-color:#e8dfc0 ;
-  width:fit-content;
+  width:max-content;
   border-radius: 4px;
   padding:10px;
   position:absolute;
@@ -33,6 +33,19 @@
   top:50%;
   transform:translate(-50%,-50%);
   box-shadow: 0px 6px 5px 2px rgba(0,0,0,0.3);
+}
+.mainWindowTitle{
+  font-size:40px;
+  margin:0;
+  padding-top:3px;
+}
+.windowsXP{
+  width:100%;
+  max-width:490px;
+  height:auto;
+  border-radius:12px;
+  padding-top:10px;
+  padding-bottom:10px;
 }
 .titlebar{
   cursor:grab;
@@ -55,24 +68,75 @@
   border-color:rgb(88, 85, 85);
   cursor:pointer;
   padding:0;
+  transition: background 0.3s;
 }
 .close-btn:hover{
+  transition: background 0.3s;
   background: #c94a3a;
   color:white;
 }
 .close-btn:active{
   transform:scale(0.96)
 }
-.mainWindowTitle{
-  font-size:40px;
-  margin:0;
-  padding-top:3px;
+.notes_App{
+  text-align: center; 
+  padding: 16px; 
+  filter: drop-shadow(0 0 6px black); 
+  width: fit-content
 }
-.windowsXP{
-  width:100%;
-  max-width:490px;
-  height:auto;
-  border-radius:12px;
-  padding-top:10px;
-  padding-bottom:10px;
+.notes_icon{
+  width: 64px; 
+  height: 64px; 
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+.icon_selected{
+  transform:scale(0.96);
+  transition: transform 0.3s;
+}
+.notesWindow{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.notesTitlebar{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #8a7a4a;
+  padding: 6px 6px 0 8px;
+  border-radius: 6px 6px 0 0;
+  cursor:grab;
+  margin-bottom:0;
+}
+.notesTitlebar .close-btn{
+  align-self: center;
+  margin-bottom:6px;
+}
+.folderTabs{
+  display:flex;
+  gap: 4px;
+}
+.folderTab{
+  background-color: #d9c48a;
+  padding:4px 14px;
+  border-radius: 8px 8px 0 0;
+  cursor:pointer;
+}
+.folderPage{
+  background-color: #d9c48a;
+  padding: 12px;
+  width:clamp(250px, 50vw, 500px);
+  height:clamp(200px,50vh,400px);
+  overflow-y:auto;
+}
+#timeElement{
+  width:22ch;
+  text-align:right;
+  white-space:nowrap;
+  overflow:hidden;
+  border: 2px solid;
+  border-color: #555555 white white #555555;
+  padding: 2px 8px;
 }
