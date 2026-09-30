@@ -108,6 +108,11 @@ function setNotesContent(index){
       `<p class="noteDate">Date of entry: <span id="noteDate">${content[index].date}</span></p>` + 
       `<div id="noteText" contenteditable="true">${content[index].content}</div>`;
     currentNote=index;
+
+    var updatednoteText=document.querySelector("#noteText")
+    updatednoteText.addEventListener("input",function(){
+      content[currentNote].content=updatednoteText.innerHTML
+    });
    }
 function addToTabs(index){
   var tabs=document.querySelector("#notesTabs");
@@ -178,3 +183,5 @@ setInterval(function(){
     dateElement.textContent=scrambleText(content[currentNote].date);
   }
 },120);
+
+
