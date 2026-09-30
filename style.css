@@ -105,7 +105,7 @@
   justify-content: space-between;
   align-items: flex-end;
   background-color: #8a7a4a;
-  padding: 6px 6px 0 8px;
+  padding: 6px 6px 0 6px;
   border-radius: 6px 6px 0 0;
   cursor:grab;
   margin-bottom:0;
@@ -130,6 +130,9 @@
   width:clamp(250px, 50vw, 500px);
   height:clamp(200px,50vh,400px);
   overflow-y:auto;
+  border: 6px solid #8a7a4a;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
 }
 #timeElement{
   width:22ch;
@@ -144,4 +147,13 @@
   white-space:nowrap;
   height:24px;
   text-align:right
+}
+#newNote{
+  background-color: #d9c48a;
+  padding:4px 14px;
+  border-radius: 8px 8px 0 0;
+  cursor:pointer;
+  border:none;
+  font-family: inherit;
+  font-size: inherit;
 }
