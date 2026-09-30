@@ -105,7 +105,8 @@ function initializeWindow(elementName){
 function setNotesContent(index){
   var notesContent=document.querySelector("#notesContent")
   notesContent.innerHTML=
-      `<p class="noteDate">Date of entry: <span id="noteDate">${content[index].date}</span></p>` + content[index].content
+      `<p class="noteDate">Date of entry: <span id="noteDate">${content[index].date}</span></p>` + 
+      `<div id="noteText" contenteditable="true">${content[index].content}</div>`;
     currentNote=index;
    }
 function addToTabs(index){

@@ -140,3 +140,8 @@
   border-color: #555555 white white #555555;
   padding: 2px 8px;
 }
+.noteDate{
+  white-space:nowrap;
+  height:24px;
+  text-align:right
+}
