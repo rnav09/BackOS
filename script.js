@@ -115,6 +115,12 @@ function setNotesContent(index){
     updatednoteText.addEventListener("input",function(){
       content[currentNote].content=updatednoteText.innerHTML
     });
+
+    var allTabs=document.querySelector("#notesTabs").children;
+    for (let i=0; i<allTabs.length;i++){
+      allTabs[i].classList.remove("activeFolderTab");
+    }
+    allTabs[index].classList.add("activeFolderTab");
    }
 function addToTabs(index){
   var tabs=document.querySelector("#notesTabs");
@@ -173,11 +179,11 @@ notesIcon.addEventListener("click", function(){
   handleIconTap(notesIcon, notesScreen);
 });
 
-setNotesContent(0);
 
 for (let i=0; i<content.length;i++){
   addToTabs(i);
 }
+setNotesContent(0);
 
 setInterval(function(){
   var dateElement=document.querySelector("#noteDate");

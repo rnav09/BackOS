@@ -99,6 +99,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  width:clamp(250px,50vw,500px);
 }
 .notesTitlebar{
   display: flex;
@@ -113,21 +114,33 @@
 .notesTitlebar .close-btn{
   align-self: center;
   margin-bottom:6px;
+  flex-shrink:0;
 }
 .folderTabs{
   display:flex;
   gap: 4px;
+  overflow-x: auto;
+  min-width:0;
+  scrollbar-width: none;
 }
 .folderTab{
-  background-color: #d9c48a;
+  background-color: #c4b074;
   padding:4px 14px;
   border-radius: 8px 8px 0 0;
   cursor:pointer;
+  max-width: 12ch;
+  min-width: 4ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.activeFolderTab{
+  background-color: #d9c48a;
 }
 .folderPage{
   background-color: #d9c48a;
   padding: 12px;
-  width:clamp(250px, 50vw, 500px);
+  width:auto;
   height:clamp(200px,50vh,400px);
   overflow-y:auto;
   border: 6px solid #8a7a4a;
@@ -158,4 +171,5 @@
   font-size: inherit;
   margin-right:auto;
   margin-left:4px;
+  flex-shrink:0;
 }
