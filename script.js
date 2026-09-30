@@ -7,6 +7,7 @@ var currentIcon=undefined;
 var biggestIndex=1;
 var currentNote=0;
 var topBar=document.querySelector("#top");
+var newNoteButton=document.querySelector("#newNote");
 var content=[
   {
     title:"Welcome",
@@ -21,8 +22,9 @@ var content=[
     <p>The hum hasn't stopped since I got here.</p>
     <p>I found a bottle of almond water.</p>
     ` 
-  }
-]
+}
+];
+
 //Clock
   setInterval(function(){
     document.querySelector("#timeElement").innerHTML=scrambleText(new Date().toLocaleString())
@@ -185,3 +187,14 @@ setInterval(function(){
 },120);
 
 
+newNoteButton.addEventListener("click",function(){
+    var newNote={
+      title:"New note",
+      date:new Date().toLocaleDateString(),
+      content:
+        `<p></p>`  
+    };
+    content.push(newNote);
+    addToTabs(content.length-1);
+    setNotesContent(content.length-1);
+  })
