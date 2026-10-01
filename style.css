@@ -1,7 +1,7 @@
 .body{
   font-family: 'VT323',monospace;
   background-color: bisque;
-  background-image: url(backrooms_wall.png);
+  background-image: url(images/backrooms_wall.png);
   height:98vh;
   font-size:large;
 }
@@ -39,13 +39,14 @@
   margin:0;
   padding-top:3px;
 }
-.windowsXP{
+.welcomeSlideshow{
   width:100%;
   max-width:490px;
-  height:auto;
   border-radius:12px;
   padding-top:10px;
   padding-bottom:10px;
+  aspect-ratio:4/3;
+  object-fit:cover;
 }
 .titlebar{
   cursor:grab;
@@ -149,6 +150,8 @@
   border: 6px solid #8a7a4a;
   border-top: none;
   border-radius: 0 0 8px 8px;
+  scrollbar-width:thin;
+  scrollbar-color: #c4b074 #d9c48a;
 }
 #timeElement{
   width:22ch;

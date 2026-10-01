@@ -10,22 +10,65 @@ var topBar=document.querySelector("#top");
 var newNoteButton=document.querySelector("#newNote");
 var content=[
   {
-    title:"Welcome",
+    title:"READ_ME",
     date:"09/30/2026",
     content:
-     `<p>Notenotesnotesnotes</p>`  
+     `<p>
+     If you're reading this, you found the same computer I did.
+     I don't know how I got here. One second I was walking to the kitchen and the next I was surrounded by these walls.
+     <br>
+     <br>
+     I think I'll keep this computer as home base for now.. It's the only unique thing in here. Maybe there are other computers out there. Maybe other people too...
+     <br>
+     <br>
+     I found a few bottles of almond water today. Did some exploring too and found- guess what? More yellow-plastered walls. I'm really starting to lose track of time in here.
+     <br>
+     <br>
+     The hum was louder today. Days, hours, weeks, I can't tell. Whatever time period, I'm starting to lose touch. u3189m3ahe fueah bh3b4187741uhtguir hnj a
+     <br>
+     eageuahui ejafaenjigjhie
+     <br>
+     <br>
+     Someone has been typing on this. I didn't write all of this gibberish. I don't think I'm alone. I have to find an exit soon.
+     <br>
+     <br>
+     I think I found a way out. Or a way further in. Either way, I'm going. I think I can hear something outside the ro
+
+     </p>`  
     },
-  {
-    title:"Day 1",
-    date:"09/30/2026",
-    content:`
-    <p>The hum hasn't stopped since I got here.</p>
-    <p>I found a bottle of almond water.</p>
-    ` 
-}
 ];
 var deleteNoteButton=document.querySelector("#deleteNote");
-
+var slides=[
+  {
+    image:"images/windows_xp.jpg",
+    caption:"Level 287-'Windows XP'"
+  },
+  {
+    image: "images/backrooms_slideshow1.jpg",
+    caption: "Level 0-'The Lobby'"
+  },
+    {
+    image: "images/backrooms_slideshow2.jpg",
+    caption: "Level 188-'The Windows'"
+  },
+  {
+    image: "images/backrooms_slideshow3.jpg",
+    caption: "Level 94-'Motion'"
+  },
+  {
+    image: "images/backrooms_slideshow4.jpg",
+    caption: "Level 33-'Dead Mall'"
+  },
+  {
+    image: "images/backrooms_slideshow5.jpg",
+    caption: "Level 1-'The Habitable Zone'"
+  },
+  {
+    image: "images/backrooms_slideshow6.jpg",
+    caption: "Level 3-'Electrical Station'"
+  }
+];
+var currentSlide=0;
 //Clock
   setInterval(function(){
     document.querySelector("#timeElement").innerHTML=scrambleText(new Date().toLocaleString())
@@ -208,10 +251,28 @@ newNoteButton.addEventListener("click",function(){
   })
 
 deleteNoteButton.addEventListener("click",function(){
-    content.splice(currentNote,1);
+  if (content.length==1){
+    return;
+  }  
+  
+  content.splice(currentNote,1);
     document.querySelector("#notesTabs").innerHTML=""
     for (let i=0; i<content.length;i++){
       addToTabs(i);
     }
-    setNotesContent(currentNote-1)
+  if (currentNote==0){
+    setNotesContent(0);
+  }
+  else{
+    setNotesContent(currentNote-1);
+  }
 })
+
+setInterval(function(){
+  currentSlide++;
+  if (currentSlide==slides.length){
+    currentSlide=0;
+  }
+  document.querySelector("#welcomeSlideshow").src=slides[currentSlide].image;
+  document.querySelector("#welcomeSlideshowCaption").textContent=slides[currentSlide].caption;
+},3000);
