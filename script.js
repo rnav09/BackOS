@@ -24,6 +24,7 @@ var content=[
     ` 
 }
 ];
+var deleteNoteButton=document.querySelector("#deleteNote");
 
 //Clock
   setInterval(function(){
@@ -121,6 +122,7 @@ function setNotesContent(index){
       allTabs[i].classList.remove("activeFolderTab");
     }
     allTabs[index].classList.add("activeFolderTab");
+    allTabs[index].scrollIntoView();
    }
 function addToTabs(index){
   var tabs=document.querySelector("#notesTabs");
@@ -195,12 +197,21 @@ setInterval(function(){
 
 newNoteButton.addEventListener("click",function(){
     var newNote={
-      title:"New note",
       date:new Date().toLocaleDateString(),
       content:
-        `<p></p>`  
+        `<p></p>`,
+      title:"Entry_"+(content.length+1), 
     };
     content.push(newNote);
     addToTabs(content.length-1);
     setNotesContent(content.length-1);
   })
+
+deleteNoteButton.addEventListener("click",function(){
+    content.splice(currentNote,1);
+    document.querySelector("#notesTabs").innerHTML=""
+    for (let i=0; i<content.length;i++){
+      addToTabs(i);
+    }
+    setNotesContent(currentNote-1)
+})

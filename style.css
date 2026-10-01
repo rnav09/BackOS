@@ -122,6 +122,7 @@
   overflow-x: auto;
   min-width:0;
   scrollbar-width: none;
+  mask-image: linear-gradient(to right, black 80%, transparent);
 }
 .folderTab{
   background-color: #c4b074;
@@ -136,6 +137,8 @@
 }
 .activeFolderTab{
   background-color: #d9c48a;
+  max-width:none;
+  flex-shrink:0;
 }
 .folderPage{
   background-color: #d9c48a;
@@ -161,7 +164,7 @@
   height:24px;
   text-align:right
 }
-#newNote{
+#newNote, #deleteNote{
   background-color: #d9c48a;
   padding:4px 14px;
   border-radius: 8px 8px 0 0;
@@ -169,7 +172,13 @@
   border:none;
   font-family: inherit;
   font-size: inherit;
-  margin-right:auto;
   margin-left:4px;
   flex-shrink:0;
+}
+#newNote{
+  margin-right:auto;
+}
+#noteText{
+  min-height:330px;
+  outline:None;
 }
