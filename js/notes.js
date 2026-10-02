@@ -29,6 +29,10 @@ var content=[
      </p>`  
     },
 ];
+var savedNotes=localStorage.getItem("notes");
+if (savedNotes){
+  content=JSON.parse(savedNotes);
+}
 var deleteNoteButton=document.querySelector("#deleteNote");
 
 function setNotesContent(index){
@@ -41,6 +45,7 @@ function setNotesContent(index){
     var updatednoteText=document.querySelector("#noteText")
     updatednoteText.addEventListener("input",function(){
       content[currentNote].content=updatednoteText.innerHTML
+      saveNotes();
     });
 
     var allTabs=document.querySelector("#notesTabs").children;
@@ -50,7 +55,9 @@ function setNotesContent(index){
     allTabs[index].classList.add("activeFolderTab");
     allTabs[index].scrollIntoView();
    }
-
+function saveNotes(){
+  localStorage.setItem("notes", JSON.stringify(content));
+}
 function addToTabs(index){
   var tabs=document.querySelector("#notesTabs");
   var note=content[index];
@@ -87,6 +94,7 @@ newNoteButton.addEventListener("click",function(){
       title:"Entry_"+(content.length+1), 
     };
     content.push(newNote);
+    saveNotes();
     addToTabs(content.length-1);
     setNotesContent(content.length-1);
   })
@@ -97,9 +105,10 @@ deleteNoteButton.addEventListener("click",function(){
   }  
   
   content.splice(currentNote,1);
-    document.querySelector("#notesTabs").innerHTML=""
-    for (let i=0; i<content.length;i++){
-      addToTabs(i);
+  saveNotes();
+  document.querySelector("#notesTabs").innerHTML=""
+  for (let i=0; i<content.length;i++){
+    addToTabs(i);
     }
   if (currentNote==0){
     setNotesContent(0);
