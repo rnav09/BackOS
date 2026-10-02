@@ -86,6 +86,9 @@ function initializeWindow(elementName){
 
 //App is selected effect
 function selectIcon(element){
+  if (currentIcon){
+    deselectIcon(currentIcon);
+}
   element.classList.add("icon_selected");
   currentIcon=element;
 }
