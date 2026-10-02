@@ -1,15 +1,13 @@
 //Elements
 var welcomeScreen=document.querySelector("#welcome")
 var welcomeScreenOpen=document.querySelector("#welcomeopen")
-var notesIcon=document.querySelector("#notesIcon");
-var notesScreen=document.querySelector("#notes");
-var keypadIcon=document.querySelector("#keypadIcon");
-var keypadScreen=document.querySelector("#keypad");
 var currentIcon=undefined;
 var biggestIndex=1;
 var currentNote=0;
 var topBar=document.querySelector("#top");
 var newNoteButton=document.querySelector("#newNote");
+var typedPassword="";
+var correctPassword="1234";
 var content=[
   {
     title:"READ_ME",
@@ -118,9 +116,7 @@ function closeWindow(element){
 }
 function openWindow(element){
   element.style.display="block"
-  biggestIndex++;
-  element.style.zIndex=biggestIndex;
-  topBar.style.zIndex=biggestIndex+1;
+  handleWindowTap(element);
 
 }
 
@@ -149,6 +145,9 @@ function initializeWindow(elementName){
   addWindowTapHandling(screen);
   makeCloseable(elementName);
   dragElement(screen);
+  if (elementName!="welcome"){
+    initializeIcon(elementName);
+  }
 }
 function setNotesContent(index){
   var notesContent=document.querySelector("#notesContent")
@@ -213,6 +212,13 @@ function handleIconTap(element, appWindow){
     selectIcon(element);
   }
 }
+function initializeIcon(name){
+  var icon=document.querySelector("#"+name+"Icon");
+  var screen=document.querySelector("#"+name);
+  icon.addEventListener("click", function(){
+    handleIconTap(icon, screen);
+  });
+}
 
 //Setup
 initializeWindow("welcome");
@@ -221,14 +227,6 @@ initializeWindow("keypad");
 welcomeScreenOpen.addEventListener("click",function(){
   openWindow(welcomeScreen);
 })
-
-notesIcon.addEventListener("click", function(){
-  handleIconTap(notesIcon, notesScreen);
-});
-
-keypadIcon.addEventListener("click", function(){
-  handleIconTap(keypadIcon, keypadScreen);
-});
 
 for (let i=0; i<content.length;i++){
   addToTabs(i);
@@ -282,3 +280,15 @@ setInterval(function(){
   document.querySelector("#welcomeSlideshowCaption").textContent=slides[currentSlide].caption;
 },3000);
 
+var keys=document.querySelectorAll(".keypadKey");
+for (let i=0; i<keys.length;i++){
+  let key=keys[i];
+
+    key.addEventListener("click",function(){
+      if (typedPassword.length<4){
+        typedPassword+=key.textContent;
+        document.querySelector("#keypadDisplay").textContent=typedPassword;
+
+      }
+    });
+}

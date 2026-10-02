@@ -90,6 +90,7 @@
   height: 64px; 
   border-radius: 4px;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 .icon_selected{
   transform:scale(0.96);
@@ -159,7 +160,7 @@
   white-space:nowrap;
   overflow:hidden;
   border: 2px solid;
-  border-color: #555555 white white #555555;
+  border-color: #555 white white #555;
   padding: 2px 8px;
 }
 .noteDate{
@@ -188,7 +189,7 @@
 .keypadWindow{
   border: solid 2px;
   border-color: #b8a13a;
-  background-color:#e8dfc0 ;
+  background-color:#cfc49a ;
   width:max-content;
   border-radius: 4px;
   padding:10px;
@@ -197,4 +198,41 @@
   top:50%;
   transform:translate(-50%,-50%);
   box-shadow: 0px 6px 5px 2px rgba(0,0,0,0.3);
+}
+.keypadGrid{
+  display:grid;
+  grid-template-columns: repeat(3, 70px);
+  gap:6px;
+}
+#keypadDisplay{
+  background-color: #0d1a0d;
+  color: #33ff66;
+  text-shadow: 0 0 6px #33ff66;
+  font-size: 40px;
+  padding:8px;
+  margin-bottom: 10px;
+  text-align:center;
+  letter-spacing:8px 12px;
+  border-color: #555 white white #555;
+  border: 3px solid;
+}
+.keypadKey, .keypadAction{
+  background-color: #d8cfa8;
+  color: #2b2410;
+  font-family: inherit;
+  font-size: 28px;
+  padding: 10px 0;
+  border: 3px solid;
+  border-color: white #555 #555 white;
+  cursor:pointer;
+}
+.keypadKey:active, .keypadAction:active{
+  border-color: #555 white white #555;
+}
+
+#keypadClear{
+  background-color: #c9a08a;
+}
+#keypadEnter{
+  background-color: #a9c48a;
 }
