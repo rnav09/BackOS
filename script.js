@@ -3,6 +3,8 @@ var welcomeScreen=document.querySelector("#welcome")
 var welcomeScreenOpen=document.querySelector("#welcomeopen")
 var notesIcon=document.querySelector("#notesIcon");
 var notesScreen=document.querySelector("#notes");
+var keypadIcon=document.querySelector("#keypadIcon");
+var keypadScreen=document.querySelector("#keypad");
 var currentIcon=undefined;
 var biggestIndex=1;
 var currentNote=0;
@@ -215,7 +217,7 @@ function handleIconTap(element, appWindow){
 //Setup
 initializeWindow("welcome");
 initializeWindow("notes");
-
+initializeWindow("keypad");
 welcomeScreenOpen.addEventListener("click",function(){
   openWindow(welcomeScreen);
 })
@@ -224,6 +226,9 @@ notesIcon.addEventListener("click", function(){
   handleIconTap(notesIcon, notesScreen);
 });
 
+keypadIcon.addEventListener("click", function(){
+  handleIconTap(keypadIcon, keypadScreen);
+});
 
 for (let i=0; i<content.length;i++){
   addToTabs(i);
@@ -276,3 +281,4 @@ setInterval(function(){
   document.querySelector("#welcomeSlideshow").src=slides[currentSlide].image;
   document.querySelector("#welcomeSlideshowCaption").textContent=slides[currentSlide].caption;
 },3000);
+
