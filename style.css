@@ -236,3 +236,32 @@
 #keypadEnter{
   background-color: #a9c48a;
 }
+#bootScreen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color:#0d0a04;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffb000;
+}
+#bootScreen img{
+  height:80px;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(5deg) drop-shadow(0 0 6px #ffb000);
+}
+#bootVersion{
+  display:inline-block;
+  width:7ch;
+  text-align: left;
+  height:1em;
+  overflow:hidden;
+  line-height:1em;
+}
+#bootText{
+  text-align:center;
+}
