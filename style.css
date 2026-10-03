@@ -79,13 +79,13 @@
 .close-btn:active{
   transform:scale(0.96)
 }
-.notes_App, .keypadApp, .photosApp, .tapesApp{
+.notes_App, .keypadApp, .photosApp, .tapesApp, .terminalApp{
   text-align: center; 
   padding: 16px; 
   filter: drop-shadow(0 0 6px black); 
   width: fit-content
 }
-.notes_icon, .keypadIcon, .photosIcon, .tapesIcon{
+.notes_icon, .keypadIcon, .photosIcon, .tapesIcon, .terminalIcon{
   width: 64px; 
   height: 64px; 
   border-radius: 4px;

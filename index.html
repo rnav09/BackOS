@@ -84,6 +84,12 @@
         tapes.exe
       </p>
   </div>
+  <div class="terminalApp">
+      <img src="images/terminalIcon.png" class="terminalIcon" id="terminalIcon">
+      <p style="margin: 0px;">
+        terminal.exe
+      </p>
+  </div>
   <div class="keypadApp">
       <img src="images/padlockIcon.png" class="keypadIcon" id="keypadIcon">
       <p style="margin:0px;">
@@ -192,7 +198,19 @@
 </div>
 
 
-
+<div id="terminal" class="terminalWindow" style="display:none">
+  <div id="terminalheader" class="titlebar">
+    terminal.exe
+    <button id="terminalclose" class="close-btn">
+      X
+    </button>
+  </div>
+  <div id="terminalOutput"></div>
+    <div class="terminalLine">
+      <span>C:\LEVEL0&gt;</span>
+      <input id="terminalInput">
+    </div>
+</div>
 
 
 
@@ -204,6 +222,7 @@
 <script src="js/boot.js"></script>
 <script src="js/photos.js"></script>
 <script src="js/tapes.js"></script>
+<script src="js/terminal.js"></script>
 </body>
 
 </html>
