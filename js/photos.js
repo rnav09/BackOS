@@ -26,8 +26,9 @@ var photos=[
   },
   {
     image:"images/emptygalleryarea.jpg",
-    caption:"",
-    location:"Empty Gallery Area"
+    caption:"...",
+    location:"Empty Gallery Area",
+    marked: true
   },
   {
     image:"images/householdarea.jpg",
@@ -68,7 +69,9 @@ function addFrame(index){
   var photo=photos[index];
   var frame=document.createElement("div");
   frame.className="filmFrame";
-
+  if (photo.marked){
+    frame.classList.add("marked");
+  }
   frame.innerHTML=
     `<img src="${photo.image}">`+
     `<p>${index+1}</p>`

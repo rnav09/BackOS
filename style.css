@@ -302,6 +302,7 @@
 }
 .filmFrame{
   cursor: pointer;
+  position: relative;
 }
 #viewerImage{
   width:100%;
@@ -332,4 +333,13 @@
 }
 #viewerBack:active{
   border-color: #555 white white #555;
+}
+.marked::after{
+  content:"";
+  position:absolute;
+  inset: -10px;
+  background-image:url(images/redcircle.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  pointer-events:none;
 }
