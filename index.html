@@ -72,6 +72,12 @@
        Notes.exe
       </p>
   </div>
+  <div class="photosApp">
+      <img src="images/cameraIcon.png" class="photosIcon" id="photosIcon">
+      <p style="margin:0px;">
+        photos.exe
+      </p>
+  </div>
   <div class="keypadApp">
       <img src="images/padlockIcon.png" class="keypadIcon" id="keypadIcon">
       <p style="margin:0px;">
@@ -130,7 +136,22 @@
       </div>
 </div>
 
-
+<div id="photos" class="photosWindow" style="display:none">
+  <div id="photosheader" class="titlebar">
+    photos.exe
+    <button id="photosclose" class="close-btn">
+      X
+    </button>
+  </div>
+  <div id="photoWall">
+  </div>
+  <div id="photoViewer" style="display:none">
+    <img id="viewerImage">
+    <p id="viewerLocation"></p>
+    <p id="viewerCaption"></p>
+    <button id="viewerBack">Back</button>
+  </div>
+</div>
 
 
 
@@ -144,6 +165,7 @@
 <script src="js/notes.js"></script>
 <script src="js/keypad.js"></script>
 <script src="js/boot.js"></script>
+<script src="js/photos.js"></script>
 </body>
 
 </html>
