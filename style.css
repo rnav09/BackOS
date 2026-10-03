@@ -354,3 +354,76 @@
   padding: 10px;
   box-shadow: 0px 6px 5px 2px rgba(0,0,0,0.3);
 }
+.cassette{
+  width: 420px;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+.cassetteLabel{
+  background-color:#e8dfc0;
+  color:#2b2410;
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cassetteWindow{
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+  background-color: #111;
+  border-radius: 30px;
+  padding: 10px;
+}
+.reel{
+  width:70px;
+  height:70px;
+  border-radius: 50%;
+  border: 6px dashed #ddd;
+  background-color: #444;
+}
+.tapeControls{
+  display:flex;
+  justify-content: center;
+  gap:20px;
+}
+.tapeButton{
+  background-color: #d8cfa8;
+  color: #2b2410;
+  font-family: inherit;
+  font-size: 24px;
+  width: 60px;
+  padding: 6px 0;
+  border: 3px solid;
+  border-color: white #555 #555 white;
+  cursor: pointer;
+}
+.tapeButton:active{
+  border-color: #555 white white #555;
+}
+.tapeProgress{
+  display:flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom:12px;
+  font-size:18px;
+}
+
+.tapeBar{
+  flex-grow: 1;
+  height:8px;
+  background-color: #2a2a2a;
+  border: 2px solid;
+  border-color: #555 white white #555;
+}
+#tapeBarFill{
+  height:100%;
+  width:0%;
+  background-color: #e8a33a;
+}

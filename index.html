@@ -167,7 +167,27 @@
       X
     </button>
   </div>
-  <p>tape player goes here</p>
+  <div class="cassette">
+    <div class="cassetteLabel">
+      <span id="tapeTitle">side A</span>
+    </div>
+    <div class="cassetteWindow">
+      <div class="reel" id="reelLeft"></div>
+      <div class="reel" id="reelRight"></div>
+    </div>
+  </div>
+  <div class="tapeProgress">
+    <span id="tapeCurrent">0:00</span>
+    <div class="tapeBar">
+      <div id="tapeBarFill"></div>
+    </div>
+    <span id="tapeLength">0:00</span>
+  </div>
+  <div class="tapeControls">
+    <button id="tapePrev" class="tapeButton">⏮</button>
+    <button id="tapePlay" class="tapeButton">▶</button>
+    <button id="tapeNext" class="tapeButton">⏭</button>
+  </div>
 </div>
 
 
