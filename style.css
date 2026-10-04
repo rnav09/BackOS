@@ -167,7 +167,15 @@
 .noteDate{
   white-space:nowrap;
   height:24px;
-  text-align:right
+  text-align:right;
+  overflow:hidden;
+}
+#noteDate{
+  display: inline-block;
+  width: 12ch;
+  overflow:hidden;
+  text-align:left;
+  vertical-align:bottom;
 }
 #newNote, #deleteNote{
   background-color: #d9c48a;
