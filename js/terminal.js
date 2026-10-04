@@ -44,6 +44,8 @@ function runCommand(command){
     printLine("tapes.exe");
     printLine("keypad.exe");
     printLine("terminal.exe");
+    printLine("desmiler.exe");
+    printLine("settings.exe");
     printLine("escape_plan.txt  [CORRUPTED]");
     printLine("user_4.log       [ACCESS DENIED]");
   }

@@ -485,8 +485,11 @@
   font-size: inherit;
   caret-color: #ffb000;
 }
-.settingsIcon{
+.settingsIcon, #notesIcon{
   filter:sepia(0.4);
+}
+#terminalIcon{
+  filter:sepia(0.43)
 }
 .settingsWindow{
   position: absolute;
@@ -588,7 +591,7 @@
 }
 #desmilerGrid{
   display: grid;
-  grid-template-columns: repeat(8,30px);
+  grid-template-columns: repeat(8,40px);
   border:2px solid;
   border-color: #555 white white #555;
 }
@@ -596,11 +599,29 @@
   margin-top: 0;
 }
 .tile{
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   box-sizing:border-box;
   background-color: #d8cfa8;
   border: 3px solid;
   border-color: white #555 #555 white;
   cursor:pointer;
+  text-align: center;
+  line-height: 34px;
+  font-size: 28px;
+}
+.tile.revealed{
+  background-color: #bfb796;
+  border: 1px solid #8f8a7e;
+  cursor: default;
+  line-height: 38px;
+}
+.tile.chalked{
+  color: #f4f1e8;
+  text-shadow: 0 0 3px white;
+}
+.desmilerMessage{
+  text-align: center;
+  margin: 8px 0 0;
+  min-height: 1.2em;
 }
