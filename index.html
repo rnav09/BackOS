@@ -104,6 +104,12 @@
         settings.exe
       </p>
   </div>
+  <div class="desmilerApp">
+    <img src="images/cameraIcon.png" class="desmilerIcon" id="desmilerIcon">
+      <p style="margin: 0px;">
+        desmiler.exe
+      </p>
+  </div>
   <div class="keypadApp">
       <img src="images/padlockIcon.png" class="keypadIcon" id="keypadIcon">
       <p style="margin:0px;">
@@ -269,7 +275,23 @@
   </fieldset>
 
   <p class="settingsFooter">BackOS v<span id="settingsVersion">0.0.∞</span> · user 4 of ∞</p>
-  </div>
+</div>
+</div>
+
+  <div id="desmiler" class="desmilerWindow" style="display:none">
+    <div id="desmilerheader" class="titlebar">
+      desmiler.exe
+      <button id="desmilerclose" class="close-btn">
+        X
+      </button>
+    </div>
+    <div class="desmilerStatus">
+      <span id="desmilerMarks" class="desmilerCounter">x 010</span>
+      <button id="desmilerRestart" class="settingsButton">&#x21BB;</button>
+      <span id="desmilerTimer" class="desmilerCounter">000</span>
+    </div>
+   
+    <div id="desmilerGrid"></div>
 </div>
 
 
@@ -284,6 +306,7 @@
 <script src="js/tapes.js"></script>
 <script src="js/terminal.js"></script>
 <script src="js/settings.js"></script>
+<script src="js/desmiler.js"></script>
 
 </body>
 

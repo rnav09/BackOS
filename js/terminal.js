@@ -1,6 +1,6 @@
 initializeWindow("terminal");
 
-var apps=["notes","photos","tapes","keypad","terminal","welcome","settings"];
+var apps=["notes","photos","tapes","keypad","terminal","welcome","settings","desmiler"];
 var output=document.querySelector("#terminalOutput");
 var input=document.querySelector("#terminalInput");
 
