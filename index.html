@@ -12,6 +12,14 @@
 </head>
 
 <body class="body">
+
+
+<video id="wallpaperVideo" src="images/poolrooms_wall.mp4" autoplay muted loop playsinline style="display:none"></video>
+<div id="dimmer"></div>
+
+
+
+
 <div id="bootScreen">
 <img src="images/infinity_free_symbol.png">
 <h1>BackOS v<span id="bootVersion">0.0.∞</span></h1>
@@ -88,6 +96,12 @@
       <img src="images/terminalIcon.png" class="terminalIcon" id="terminalIcon">
       <p style="margin: 0px;">
         terminal.exe
+      </p>
+  </div>
+  <div class="settingsApp">
+    <img src="images/settingsIcon.png" class="settingsIcon" id="settingsIcon">
+      <p style="margin: 0px;">
+        settings.exe
       </p>
   </div>
   <div class="keypadApp">
@@ -212,6 +226,52 @@
     </div>
 </div>
 
+<div id="settings" class="settingsWindow" style="display:none">
+  <div id="settingsheader" class="titlebar">
+    settings.exe
+  <button id="settingsclose" class="close-btn">
+    X
+  </button>
+  </div>
+  <div>
+    <fieldset>
+      <legend>Display</legend>
+
+
+      <label>
+        Wallpaper:
+        <select id="settingWallpaper">
+          <option value="images/backrooms_wall.png">Level 0</option>
+          <option value="images/poolrooms_wall.mp4">Level 37</option>
+          <option value="images/funrooms_wall.jpg">Level Fun =&#41;</option>
+        </select>
+      </label>
+
+      <label>
+        Brightness:
+        <input type="range" id="settingBrightness" min="50" max="100" value="100">
+      </label>
+      <label>
+        <input type="checkbox" id="settingMotion">
+        Reduce motion
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>System</legend>
+    <button id="settingResetNotes" class="settingsButton">Reset notes</button>
+    <button id="settingResetAll" class="settingsButton">Reset BackOS</button>
+
+    <label class="unavailable">
+      <input type="checkbox" disabled>
+      Exit Backrooms (unavailable)
+    </label>
+  </fieldset>
+
+  <p class="settingsFooter">BackOS v<span id="settingsVersion">0.0.∞</span> · user 4 of ∞</p>
+  </div>
+</div>
+
 
 
 <script src="js/windows.js"></script>
@@ -223,6 +283,8 @@
 <script src="js/photos.js"></script>
 <script src="js/tapes.js"></script>
 <script src="js/terminal.js"></script>
+<script src="js/settings.js"></script>
+
 </body>
 
 </html>
