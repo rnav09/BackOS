@@ -23,5 +23,5 @@ document.querySelector("#bootScreen").addEventListener("click",function(){
 });
 
 setInterval(function(){
-  document.querySelector("#bootVersion").textContent=scrambleText("v0.0.∞")
+  document.querySelector("#bootVersion").textContent=scrambleText("0.0.∞")
 },200);
