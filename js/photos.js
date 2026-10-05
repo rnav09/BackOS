@@ -57,7 +57,7 @@ var photos=[
   },
   {
     image:"images/tiledpoolarea.jpg",
-    caption:"lifeguard on break?",
+    caption:"count us",
     location:"Tiled Pool Area"
   }
 ];

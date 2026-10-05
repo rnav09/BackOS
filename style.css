@@ -82,9 +82,9 @@
 }
 .notes_App, .keypadApp, .photosApp, .tapesApp, .terminalApp, .settingsApp, .desmilerApp{
   text-align: center; 
-  padding: 16px; 
+  padding: 8px; 
   filter: drop-shadow(0 0 6px black); 
-  width: fit-content
+  width: 96px;
 }
 .notes_icon, .keypadIcon, .photosIcon, .tapesIcon, .terminalIcon, .settingsIcon, .desmilerIcon{
   width: 64px; 
@@ -224,6 +224,10 @@
   letter-spacing:8px;
   border: 3px solid;
   border-color: #555 white white #555;
+  width: 222px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .keypadKey, .keypadAction{
   background-color: #d8cfa8;
@@ -245,7 +249,7 @@
 #keypadEnter{
   background-color: #a9c48a;
 }
-#bootScreen{
+#bootScreen, #endScreen{
   position: fixed;
   top: 0;
   left: 0;
@@ -258,6 +262,14 @@
   justify-content: center;
   align-items: center;
   color: #ffb000;
+}
+#endScreen{
+  z-index:3000;
+  transition: background-color 2s, color 2s;
+}
+#endScreen.whiteout{
+  background-color: white;
+  color: white;
 }
 #bootScreen img{
   height:80px;
@@ -624,4 +636,12 @@
   text-align: center;
   margin: 8px 0 0;
   min-height: 1.2em;
+}
+.desktop{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding-left: 16px;
+  box-sizing: border-box;
 }

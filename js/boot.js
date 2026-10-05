@@ -2,7 +2,7 @@ var bootLines=[
   "Checking memory... OK",
   "Loading hallways... OK",
   "Searching for exits... 0 found",
-  "Welcome back."
+  "Welcome back, user 4."
 ];
 var currentLine=0
 
