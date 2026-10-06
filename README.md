@@ -94,6 +94,9 @@ Songs: All 6 songs on the cassette player are from:
 The Caretaker-Everywhere At The End of Time
 Photos: The photos in the camera app are from Kane Pixel's backrooms found footage series on yt.
 Most of the other photos are from the backrooms wiki.
+Terminal Icon - Flaticon.com
+Settings Icon - Wikimedia Design, OOUI team and other Wikimedia contributors
+Notes Icon    - Pinterest- al3xxst4rr 
 
 <details>
 <summary>Spoilers</summary>
